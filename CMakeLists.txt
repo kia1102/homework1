@@ -17,7 +17,7 @@ configure_file(version.h.in version.h)
 add_executable(helloworld_cli main.cpp)
 add_library(buildinfo buildinfo.cpp)
 
-set_target_properties(homework1 buildinfo PROPERTIES
+set_target_properties(helloworld_cli buildinfo PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
