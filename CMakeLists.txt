@@ -14,7 +14,7 @@ configure_file(version.h.in version.h)
 
 
 
-add_executable(homework1 main.cpp)
+add_executable(helloworld_cli main.cpp)
 add_library(buildinfo buildinfo.cpp)
 
 set_target_properties(homework1 buildinfo PROPERTIES
@@ -26,7 +26,7 @@ target_include_directories(buildinfo
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
 
-target_link_libraries(homework1 PRIVATE
+target_link_libraries(helloworld_cli PRIVATE
 buildinfo
 )
 
@@ -51,7 +51,7 @@ if(WITH_BOOST_TEST)
 endif()
 
 
-install(TARGETS homework1 RUNTIME DESTINATION bin)
+install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
